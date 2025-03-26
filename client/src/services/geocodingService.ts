@@ -21,12 +21,14 @@ export async function searchPlaces(
   isReverse: boolean = false
 ): Promise<SearchResult[]> {
   try {
-    const response = await apiRequest(
-      'GET',
-      `/api/geocode?q=${encodeURIComponent(query)}&reverse=${isReverse}`
-    );
-    
-    const data = await response.json();
+    const url = `/api/geocode?q=${encodeURIComponent(query)}&reverse=${isReverse}`;
+    console.log('Fetching:', url);
+    const response = await apiRequest('GET', url);
+    console.log('Response Status:', response.status);
+    console.log('Response Headers:', Object.fromEntries(response.headers));
+    const text = await response.text(); // Get raw text first
+    console.log('Response Body:', text);
+    const data = JSON.parse(text); // Parse manually
     return data;
   } catch (error) {
     console.error('Error searching places:', error);

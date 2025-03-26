@@ -33,4 +33,14 @@ export default defineConfig({
     outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
   },
+  server: {  // Add this section
+    port: 5173, // Optional: Explicitly set Vite's port
+    host: true, // Expose to network (matches --host flag)
+    proxy: {
+      "/api": {
+        target: "http://localhost:5000",
+        changeOrigin: true,
+      },
+    },
+  }
 });
