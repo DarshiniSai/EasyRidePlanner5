@@ -65,8 +65,12 @@ Wrap
 
 Copy
 npm run dev
+
+
 This uses tsx to run server/index.ts.
 Provides API endpoints like /api/geocode and /api/routes.
+
+
 4. Run the Frontend
 Start the Vite development server on localhost:5173:
 
@@ -78,8 +82,12 @@ Wrap
 
 Copy
 npm run dev:frontend
+
+
 Opens the React app in your browser.
 Proxies /api requests to localhost:5000.
+
+
 5. Access the Application
 Open http://localhost:5173 in your browser.
 Use the location input to search for places or plan routes.
