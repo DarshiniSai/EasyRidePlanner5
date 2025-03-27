@@ -41,8 +41,8 @@ Collapse
 Wrap
 
 Copy
-git clone https://github.com/your-username/SmartRouteNavigator.git
-cd SmartRouteNavigator
+git clone https://github.com/DarshiniSai/EasyRidePlanner5.git
+cd EasyRidePlanner5
 2. Install Dependencies
 Install all required packages for both frontend and backend:
 
